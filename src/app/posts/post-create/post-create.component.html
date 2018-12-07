@@ -1,0 +1,13 @@
+<mat-card>
+  <form>
+    <mat-form-field>
+      <input type="text" name="postTitle" placeholder="Enter Post Title" matInput #postTitle required="required">
+      <mat-error *ngIf="postTitle.invalid">Please Enter Title</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <textarea matInput rows="4" name="postBody" placeholder="Enter Post Description" #postBody required="required"></textarea>
+      <mat-error *ngIf="postBody.invalid">Please Enter Title</mat-error>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" type="submit" (click)="onAddPost(postTitle, postBody)">Save</button>
+  </form>
+</mat-card><br>
